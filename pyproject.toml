@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 name = "bigtalk"
 version = "1"
 authors = [
-    {name = "Nixt Niet", email = "nixtniet@gmail.com" },
+    {name = "Bart", email = "bthate@dds.nl" },
 ]
 description = "Big Talk"
 readme = "README.rst"

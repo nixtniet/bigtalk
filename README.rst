@@ -1,12 +1,12 @@
-N I X T
-=======
+B I G T A L K
+=============
 
 
 **NAME**
 
 
 |
-| ``NIXT`` - NIXT
+| ``bigtalk`` - Big Talk
 |
 
 
@@ -14,21 +14,21 @@ N I X T
 
 ::
 
-    >>> from nixt.objects import Object
-    >>> from nixt.serials import dumps, loads
+    >>> from bigtalk.objects import Object
+    >>> from bigtalk.serials import Jsondumps, loads
     >>> o = Object()
     >>> o.a = "b"
-    >>> print(loads(dumps(o)))
+    >>> print(Json.loads(Json.dumps(o)))
     {'a': 'b'}
 
 
 **DESCRIPTION**
 
-NIXT has all you need to program a unix cli program, such as disk
+BigTalk has all you need to program a unix cli program, such as disk
 perisistence for configuration files, event handler to handle the
 client/server connection, etc.
 
-NIXT contains python3 code to program objects in a functional
+BiGTalk contains python3 code to program objects in a functional
 way. it provides an “clean namespace” Object class that only has
 dunder methods, so the namespace is not cluttered with method names.
 This makes storing and reading to/from json possible.
@@ -39,17 +39,17 @@ This makes storing and reading to/from json possible.
 installation is done with pip
 
 |
-| ``$ pip install nixt``
+| ``$ pip install bigtalk``
 |
 
 **AUTHOR**
 
 |
-| Bart Thate <``nixtniet@gmail.com``>
+| Bart Thate <``bthate@dds.nl``>
 |
 
 **COPYRIGHT**
 
 |
-| ``NIXT`` is Public Domain.
+| ``BigTalk`` is Public Domain.
 |
