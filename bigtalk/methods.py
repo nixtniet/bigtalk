@@ -15,7 +15,7 @@ class Methods:
 
     @staticmethod
     def edit(obj, setter={}, skip=False):
-        for key, val in Object, items(setter):
+        for key, val in Object.items(setter):
             if skip and val == "":
                 continue
             try:
@@ -117,7 +117,7 @@ class Methods:
     @staticmethod
     def search(obj, selector={}, matching=False):
         res = False
-        for key, value in items(selector):
+        for key, value in Object.items(selector):
             val = getattr(obj, key, None)
             if not val:
                 res = False
