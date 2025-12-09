@@ -8,7 +8,6 @@ import datetime
 import importlib.util
 import inspect
 import os
-import pathlib
 import re
 import time
 
@@ -128,11 +127,6 @@ class Time:
 class Utils:
 
     @staticmethod
-    def cdir(path):
-        pth = pathlib.Path(path)
-        pth.parent.mkdir(parents=True, exist_ok=True)
-
-    @staticmethod
     def elapsed(seconds, short=True):
         txt = ""
         nsec = float(seconds)
@@ -208,15 +202,6 @@ class Utils:
         with open(path, "r", encoding="utf-8") as file:
             txt = file.read().encode("utf-8")
             return hashlib.md5(txt, usedforsecurity=False).hexdigest()
-
-    @staticmethod
-    def pidfile(filename):
-        if os.path.exists(filename):
-            os.unlink(filename)
-        path2 = pathlib.Path(filename)
-        path2.parent.mkdir(parents=True, exist_ok=True)
-        with open(filename, "w", encoding="utf-8") as fds:
-            fds.write(str(os.getpid()))
 
     @staticmethod
     def spl(txt):

@@ -55,7 +55,7 @@ class Disk:
         with lock:
             if path == "":
                 path = Workdir.path(obj)
-            Utils.cdir(path)
+            Workdir.cdir(path)
             with open(path, "w", encoding="utf-8") as fpt:
                 Json.dump(obj, fpt, indent=4)
             Cache.sync(path, obj)
