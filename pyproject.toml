@@ -1,0 +1,36 @@
+# This file is placed in the Public Domain.
+
+
+[build-system]
+requires = ["setuptools>=61.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "bigtalk"
+version = "1"
+authors = [
+    {name = "Nixt Niet", email = "nixtniet@gmail.com" },
+]
+description = "Big Talk"
+readme = "README.rst"
+license = "Unlicense"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities"
+]
+
+
+[project.urls]
+"home" = "https://pypi.org/project/bigtalk"
+"bugs" = "https://github.com/nixtniet/bigtalk/issues"
+"source" = "https://github.com/nixtniet/bigtalk"
+
+
+[tool.setuptools]
+packages = [
+    'bigtalk',
+]
+include-package-data = false
