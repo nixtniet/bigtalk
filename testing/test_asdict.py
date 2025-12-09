@@ -5,10 +5,15 @@ import unittest
 
 
 from bigtalk.methods import Methods
-from bigtalk.objects import Object, fqn, items, keys, update, values
+from bigtalk.objects import Object
 
 
-fmt = Methods.fmt
+fqn    = Object.fqn
+items  = Object.items
+keys   = Object.keys
+update = Object.update
+values = Object.values
+fmt    = Methods.fmt
 
 
 VALIDJSON = '{"test": "bla"}'

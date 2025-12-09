@@ -8,7 +8,13 @@ import unittest
 
 
 from bigtalk.methods import Methods
-from bigtalk.objects import Object, items, keys, update, values
+from bigtalk.objects import Object
+
+
+items  = Object.items
+keys   = Object.keys
+update = Object.update
+values = Object.values
 
 
 import bigtalk.objects
