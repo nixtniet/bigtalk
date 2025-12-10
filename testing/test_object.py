@@ -11,13 +11,13 @@ from bigtalk.methods import Methods
 from bigtalk.objects import Object
 
 
+import bigtalk.objects
+
+
 items  = Object.items
 keys   = Object.keys
 update = Object.update
 values = Object.values
-
-
-import bigtalk.objects
 
 
 OBJECT = Object()

@@ -69,7 +69,7 @@ class Object:
                     raise Reserved(k)
                 setattr(obj, k, v)
         elif isinstance(obj, dict):
-            for k, v in items(data):
+            for k, v in Object.items(data):
                 setattr(obj, k, v)
         else:
             for key, value in Object.items(data):

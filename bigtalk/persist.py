@@ -10,7 +10,6 @@ import threading
 
 from .objects import Object
 from .serials import Json
-from .utility import Utils
 from .workdir import Workdir
 
 
