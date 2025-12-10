@@ -42,6 +42,15 @@ installation is done with pip
 | ``$ pip install bigtalk``
 |
 
+**FILES**
+
+|
+| ``~/.bigtalk``
+| ``~/.local/bin/bigtalk``
+| ``~/.local/share/pipx/venvs/bigtalk/*``
+|
+
+
 **AUTHOR**
 
 |
