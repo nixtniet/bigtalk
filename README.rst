@@ -15,7 +15,7 @@ B I G T A L K
 ::
 
     >>> from bigtalk.objects import Object
-    >>> from bigtalk.serials import Jsondumps, loads
+    >>> from bigtalk.serials import Json
     >>> o = Object()
     >>> o.a = "b"
     >>> print(Json.loads(Json.dumps(o)))

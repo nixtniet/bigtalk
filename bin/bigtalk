@@ -179,6 +179,7 @@ class Cmds:
 
     @staticmethod
     def srv(event):
+        iport getpass
         name = getpass.getuser()
         event.reply(SYSTEMD % (Config.name.upper(), name, name, name, Config.name))
 

@@ -32,5 +32,12 @@ classifiers = [
 [tool.setuptools]
 packages = [
     'bigtalk',
+    'bigtalk.modules',
+    'bigtalk.network',
+    'bigtalk.nucleus'
 ]
-include-package-data = false
+include-package-data = true
+
+
+[tool.setuptools.package-data]
+"bigtalk.nucleus" = ["*"]

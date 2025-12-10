@@ -1,3 +1,0 @@
-include bin/clean
-include bin/bigtalk
-recursive-include mods *

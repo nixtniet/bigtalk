@@ -20,7 +20,8 @@ def main():
         srce = src.read()
     code = compile(srce, fnm, "exec")
     profile.runctx(code, __main__.__dict__, __main__.__dict__, sort="cumtime")
-
+    sys.stdout.write("\n")
+    sys.stdout.flush()
 
 if __name__ == "__main__":
     main()
