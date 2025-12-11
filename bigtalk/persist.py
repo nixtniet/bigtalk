@@ -13,10 +13,6 @@ from .serials import Json
 from .workdir import Workdir
 
 
-lock   = threading.RLock()
-update = Object.update
-
-
 class Cache:
 
     objects = {}
@@ -39,19 +35,21 @@ class Cache:
 
 class Disk:
 
+    lock = threading.RLock()
+
     @staticmethod
     def read(obj, path):
-        with lock:
+        with Disk.lock:
             with open(path, "r", encoding="utf-8") as fpt:
                 try:
-                    update(obj, Json.load(fpt))
+                    Object.update(obj, Json.load(fpt))
                 except json.decoder.JSONDecodeError as ex:
                     ex.add_note(path)
                     raise ex
 
     @staticmethod
     def write(obj, path=""):
-        with lock:
+        with Disk.lock:
             if path == "":
                 path = Workdir.path(obj)
             Workdir.cdir(path)

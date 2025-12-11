@@ -14,17 +14,13 @@ from .persist import Cache, Disk
 from .workdir import Workdir
 
 
-keys   = Object.keys
-update = Object.update
-
-
 class Locater:
 
     @staticmethod
     def attrs(kind):
         objs = list(Locater.find(kind))
         if objs:
-            return list(keys(objs[0][1]))
+            return list(Object.keys(objs[0][1]))
         return []
 
     @staticmethod
@@ -75,7 +71,7 @@ class Locater:
         res = ""
         if result:
             inp = result[-1]
-            update(obj, inp[-1])
+            Object.update(obj, inp[-1])
             res = inp[0]
         return res
 
