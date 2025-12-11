@@ -25,7 +25,7 @@ from bigtalk.workdir import Workdir
 Config.ignore = "wsd,udp"
 Config.level = "info"
 Config.name = "bigtalk" 
-Config.version = 2
+Config.version = 3
 
 
 class CLI(CLI):
